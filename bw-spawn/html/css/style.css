@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "MetalMania";
+  src: url("../fonts/MetalMania-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MarkoOne";
+  src: url("../fonts/MarkoOne-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: transparent !important;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-div {
+  background-color: #0a120e;
+  font-family: MarkoOne;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.display-4 {
+  font-family: MetalMania;
+  color: #fff !important;
+  padding-bottom: 20px;
+}
+#navbarNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item:first-of-type .nav-link {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.nav-item:last-of-type .nav-link {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.nav-link {
+  color: #fff !important;
+  background-color: #152520;
+  min-width: 120px;
+  text-align: center;
+  border: 2px solid #152520;
+}
+
+.nav-item {
+  box-sizing: border-box;
+}
+.nav-item .nav-link,
+.nav-item .active {
+  transition: all 0.3s;
+}
+.nav-item .nav-link:hover,
+.nav-item .active {
+  border: 2px solid #203c34;
+  box-shadow: inset 0px -9px 20px #20ae7c;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 405px !important;
+  transition: all 0.5s;
+}
+.swiper-slide-active {
+  height: 503px !important;
+  width: 290px !important;
+}
+.top-nav {
+  height: 25%;
+}
+.swiper {
+  height: 75%;
+}
+.swiper-wrapper {
+  align-items: center;
+}
+.swiper-button-next::before,
+.swiper-button-next::after,
+.swiper-button-next,
+.swiper-button-prev::before,
+.swiper-button-prev::after,
+.swiper-button-prev {
+  content: "";
+}
+.swiper-button-next {
+  background-image: url(../images/next.png);
+  background-size: cover;
+  width: 50px;
+  height: 39px;
+}
+.swiper-button-prev {
+  background-image: url(../images/prev.png);
+  background-size: cover;
+  width: 50px;
+  height: 39px;
+}
+
+.swiper-slide .spawn-main {
+  width: 230px;
+  height: 390px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 0.5s;
+}
+.swiper-slide-active .spawn-main {
+  width: 290px;
+  height: 485px;
+  background-color: #5f5f5f;
+}
+.swiper-slide .spawn-main .image {
+  border-radius: 8px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  filter: brightness(0.4);
+}
+.swiper-slide-active .spawn-main .image {
+  filter: brightness(0.8);
+}
+.swiper-slide .spawn-main .bottom-main {
+  position: absolute;
+  bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.swiper-slide .spawn-main .bottom-main .title {
+  color: white;
+  margin-bottom: 10%;
+}
+.swiper-slide .spawn-main .bottom-main button {
+  transition: all 0.5s;
+  display: none;
+}
+.swiper-slide-active .spawn-main .bottom-main button {
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  padding: 5px 15px;
+  background-color: #245047;
+  border: 1.5px solid #00ffcb;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.swiper-slide-active .spawn-main .bottom-main button:hover {
+  background-color: #1d443c;
+  box-shadow: 0px 0px 10px 2px #00aa88e3;
+}
+.swiper-slide .number-counter {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid #2f5143;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #74ee15;
+  background: linear-gradient(217deg, #2f5143, rgba(87, 87, 87, 0.349) 100%),
+    linear-gradient(127deg, #1faf7c, rgba(0, 255, 0, 0) 100%),
+    linear-gradient(336deg, #1faf7c, rgba(0, 0, 255, 0) 100%);
+  position: absolute;
+  color: #fff;
+  top: -15px;
+  z-index: 2;
+}
+.swiper-slide-active .number-counter {
+  top: -20px;
+}
+.swiper-slide-active .number-counter {
+  height: 68px;
+  width: 68px;
+}
